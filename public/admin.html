@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Login Form -->
+  <div class="admin-login" id="admin-login">
+    <div class="login-container">
+      <h2>Admin Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <input type="text" id="username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <p class="login-error" id="login-error"></p>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div class="admin-dashboard" id="admin-dashboard" style="display: none;">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active" data-tab="messages">
+          <i class="fas fa-envelope"></i> Messages
+        </a>
+        <a href="#" data-tab="projects">
+          <i class="fas fa-project-diagram"></i> Projects
+        </a>
+        <a href="#" data-tab="skills">
+          <i class="fas fa-code"></i> Skills
+        </a>
+        <a href="#" data-tab="chat">
+          <i class="fas fa-comments"></i> Live Chat
+        </a>
+        <a href="#" id="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Messages Tab -->
+      <div class="tab-content active" id="messages-tab">
+        <h2>Contact Messages</h2>
+        <div class="messages-list" id="messages-list">
+          <!-- Messages will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Projects Tab -->
+      <div class="tab-content" id="projects-tab">
+        <h2>Manage Projects</h2>
+        <button class="btn btn-primary add-btn" id="add-project-btn">
+          <i class="fas fa-plus"></i> Add Project
+        </button>
+        <div class="projects-list" id="projects-list">
+          <!-- Projects will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Skills Tab -->
+      <div class="tab-content" id="skills-tab">
+        <h2>Manage Skills</h2>
+        <button class="btn btn-primary add-btn" id="add-skill-btn">
+          <i class="fas fa-plus"></i> Add Skill
+        </button>
+        <div class="skills-list" id="skills-list">
+          <!-- Skills will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Chat Tab -->
+      <div class="tab-content" id="chat-tab">
+        <h2>Live Chat</h2>
+        <div class="chat-admin-container">
+          <div class="chat-users" id="chat-users">
+            <h3>Active Users</h3>
+            <div id="users-list"></div>
+          </div>
+          <div class="chat-admin-box">
+            <div class="chat-messages" id="admin-chat-messages"></div>
+            <div class="chat-input">
+              <input type="text" id="admin-message-input" placeholder="Type a reply...">
+              <button class="btn btn-primary" id="admin-send-btn">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal for Adding/Editing -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <h3 id="modal-title">Add Item</h3>
+      <form id="modal-form">
+        <div id="modal-fields"></div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.0/socket.io.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

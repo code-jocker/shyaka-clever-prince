@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">DevPortfolio</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#chat" class="chat-btn"><i class="fas fa-comments"></i> Chat</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name">Your Name</h1>
+        <h2 class="hero-title">Full Stack Developer</h2>
+        <p class="hero-bio">Building scalable web applications with modern technologies. Passionate about creating efficient solutions and beautiful user experiences.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+        </div>
+        <div class="hero-social">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/400x400/1a1a2e/fff?text=Profile" alt="Profile">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://via.placeholder.com/400x500/16213e/fff?text=About+Me" alt="About">
+        </div>
+        <div class="about-text">
+          <h3>I'm a passionate developer</h3>
+          <p>I am a Full Stack Developer with expertise in building modern web applications. I love solving complex problems and creating intuitive user experiences.</p>
+          
+          <div class="experience-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2023 - Present</h4>
+                <p>Senior Full Stack Developer</p>
+                <span>Tech Company</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2021 - 2023</h4>
+                <p>Full Stack Developer</p>
+                <span>Startup Inc</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2019 - 2021</h4>
+                <p>Frontend Developer</p>
+                <span>Digital Agency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid" id="skills-container">
+        <!-- Skills will be loaded from API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+      <div class="projects-grid" id="projects-container">
+        <!-- Projects will be loaded from API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Custom web applications built with modern technologies and best practices.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-server"></i>
+          <h3>API Development</h3>
+          <p>RESTful and GraphQL APIs with secure authentication and documentation.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful and intuitive user interfaces that enhance user experience.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h3>Consulting</h3>
+          <p>Technical consultation for your projects and team development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Rwanda</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>hello@developer.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+250 000 000 000</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat Section -->
+  <section id="chat" class="chat-section">
+    <div class="container">
+      <h2 class="section-title">Live Chat</h2>
+      <div class="chat-container">
+        <div class="chat-login" id="chat-login">
+          <h3>Enter your name to start chatting</h3>
+          <input type="text" id="user-name" placeholder="Your Name" required>
+          <button class="btn btn-primary" id="join-chat">Join Chat</button>
+        </div>
+        <div class="chat-box" id="chat-box" style="display: none;">
+          <div class="chat-header">
+            <h3>Chat with Developer</h3>
+            <span class="online-indicator"><i class="fas fa-circle"></i> Online</span>
+          </div>
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+          </div>
+          <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button class="btn btn-primary" id="send-message"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 DevPortfolio. All rights reserved.</p>
+      <p>Built with <i class="fas fa-heart"></i> using HTML, CSS & Node.js</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.socket.io/4.7.0/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

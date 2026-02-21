@@ -1,0 +1,484 @@
+/* ===== Admin Login ===== */
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.login-container {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.login-container button {
+  width: 100%;
+}
+
+.login-error {
+  color: #ef4444;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===== Admin Dashboard ===== */
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #0f172a;
+  color: white;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 30px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h2 {
+  font-size: 1.3rem;
+}
+
+.sidebar-nav {
+  padding: 20px 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background: rgba(99, 102, 241, 0.2);
+  color: white;
+  border-left: 3px solid #6366f1;
+}
+
+.sidebar-nav a i {
+  width: 20px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 260px;
+  flex: 1;
+  padding: 40px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Add Button */
+.add-btn {
+  margin-bottom: 25px;
+}
+
+/* Messages List */
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.message-header h4 {
+  color: #0f172a;
+}
+
+.message-header span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.message-content {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Projects List */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h4 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.project-info p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.project-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-actions .edit-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.project-actions .delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.project-actions button:hover {
+  opacity: 0.9;
+}
+
+/* Skills List */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-header h4 {
+  color: #0f172a;
+}
+
+.skill-category {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  background: #f1f5f9;
+  border-radius: 20px;
+  color: #64748b;
+}
+
+.skill-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 4px;
+}
+
+.skill-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.skill-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-actions .edit-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.skill-actions .delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+/* Chat Admin */
+.chat-admin-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 25px;
+  height: 600px;
+}
+
+.chat-users {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.chat-users h3 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.chat-users .user-item {
+  padding: 12px 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-users .user-item:hover,
+.chat-users .user-item.active {
+  background: #6366f1;
+  color: white;
+}
+
+.chat-admin-box {
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.chat-admin-box .chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chat-admin-box .message {
+  max-width: 80%;
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-size: 0.95rem;
+}
+
+.chat-admin-box .message.received {
+  background: #f1f5f9;
+  align-self: flex-start;
+}
+
+.chat-admin-box .message.sent {
+  background: #6366f1;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-admin-box .chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: #f8fafc;
+}
+
+.chat-admin-box .chat-input input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.chat-admin-box .chat-input input:focus {
+  outline: none;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.modal-content h3 {
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+.modal-content .form-group {
+  margin-bottom: 20px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .sidebar-header h2,
+  .sidebar-nav a span {
+    display: none;
+  }
+  
+  .sidebar-nav a {
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .main-content {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-admin-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chat-users {
+    display: none;
+  }
+}
